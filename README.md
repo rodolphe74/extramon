@@ -20,3 +20,25 @@ void unary_op(struct float_struct *fac, struct float_struct *result, unsigned ch
 void binary_op(struct float_struct *fac, struct float_struct *arg, struct float_struct *result, unsigned char op); /* operation binaire */
 char cmp(struct float_struct *fac, struct float_struct *arg); /* comparaison de 2 flottants */
 ```
+
+Ces fonctions s'utilisent par exemple ainsi :
+
+```
+#include <cmoc.h>
+#include "extramfl.h"
+
+
+int main(void)
+{
+  char value[] = "3.14156265";
+  struct float_struct fl_value;
+  
+  fin(value, &fl_result); /* création de la struct float a partir de la chaine */
+  print_float(&fl_result); /* affichage interne */
+  char *result = pufout(&fl_result_c); /* conversion */
+	printf(">%s<%c%c", result, 10, 13); /* affichage string */
+  binary_op(&fl_value, &fl_value, &fl_value, ADDGO); /* value = value + value */
+  unary_op(&fl_value, &value, NEGGO); /* value = -value */
+  return 0;
+}
+```
