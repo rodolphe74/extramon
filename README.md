@@ -6,3 +6,17 @@ Ce compilateur ne gère qu'une partie de la libc et il n'est, par exemple, pas e
 
 Il est tout de même possible d'utiliser les routines assembleurs du "moniteur" et de l'"extramoniteur" pour pallier à ces manques.
 Pour la liste exhaustives des routines, lire ce [livre](https://github.com/rodolphe74/extramon/blob/main/to8.pdf)
+
+Dans le présent projet, les routines mathématiques sur les flottants (cf page 263) ont été reprise en C dans les fichiers extramfl.h et extramfl.c.
+
+```
+void print_float(struct float_struct *fs);
+void init_extra();
+void fin(char *float_value, struct float_struct *fs);
+char *pufout(struct float_struct *fs);
+unsigned int to_unsigned_int(struct float_struct *fs);
+unsigned int to_int(struct float_struct *fs);
+void unary_op(struct float_struct *fac, struct float_struct *result, unsigned char op);
+void binary_op(struct float_struct *fac, struct float_struct *arg, struct float_struct *result, unsigned char op);
+char cmp(struct float_struct *fac, struct float_struct *arg);
+```
