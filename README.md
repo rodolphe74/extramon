@@ -10,13 +10,13 @@ Pour la liste exhaustives des routines, lire ce [livre](https://github.com/rodol
 Dans le présent projet, les routines mathématiques sur les flottants (cf page 263) ont été reprise en C dans les fichiers extramfl.h et extramfl.c.
 
 ```
-void print_float(struct float_struct *fs);
-void init_extra();
-void fin(char *float_value, struct float_struct *fs);
-char *pufout(struct float_struct *fs);
-unsigned int to_unsigned_int(struct float_struct *fs);
-unsigned int to_int(struct float_struct *fs);
-void unary_op(struct float_struct *fac, struct float_struct *result, unsigned char op);
-void binary_op(struct float_struct *fac, struct float_struct *arg, struct float_struct *result, unsigned char op);
-char cmp(struct float_struct *fac, struct float_struct *arg);
+void print_float(struct float_struct *fs); /* affiche les 5 octets représentant le flottant */
+void init_extra(); /* initialisation de l'extramoniteur */
+void fin(char *float_value, struct float_struct *fs); /* conversion chaine de car vers struct flottant */
+char *pufout(struct float_struct *fs); /* conversion struct flottant vers chaine de car */
+unsigned int to_unsigned_int(struct float_struct *fs); /* conversion flottant en entier non signé */
+unsigned int to_int(struct float_struct *fs); /* conversion flottant en entier signé */
+void unary_op(struct float_struct *fac, struct float_struct *result, unsigned char op); /* operation unaire */
+void binary_op(struct float_struct *fac, struct float_struct *arg, struct float_struct *result, unsigned char op); /* operation binaire */
+char cmp(struct float_struct *fac, struct float_struct *arg); /* comparaison de 2 flottants */
 ```
