@@ -52,7 +52,7 @@ Il est nécessaire d'avoir
 * le compilateur cmoc (sur windows, il se compile facilement avec [msys2](https://www.msys2.org/))
 * sapfs.exe (un utilitaire permettant de copier les binaires MO/TO dans un fichier SAP équivalent à une disquette thomson)
 
-le script de compilation C sur MSYS
+le script de compilation C sur MSYS (adapter éventuellement le chemin vers cmoc)
 ```shell
 # binaire en $A000 pour thomson TO
 cmoc.exe -c -O2 --thomto -I ../../cmoc-0.1.71/src -I ../../cmoc-0.1.71/src/stdlib/ -L ../../cmoc-0.1.71/src/stdlib/ extramfl.c -lcmoc-crt-thm
@@ -60,4 +60,12 @@ cmoc.exe -c -O2 --thomto -I ../../cmoc-0.1.71/src -I ../../cmoc-0.1.71/src/stdli
 cmoc.exe -O2 --thomto -I ../../cmoc-0.1.71/src -I ../../cmoc-0.1.71/src/stdlib/ -L ../../cmoc-0.1.71/src/stdlib/ fl.c -lcmoc-crt-thm extramfl.o
 cmoc.exe -O2 --thomto -I ../../cmoc-0.1.71/src -I ../../cmoc-0.1.71/src/stdlib/ -L ../../cmoc-0.1.71/src/stdlib/ gr.c -lcmoc-crt-thm extramgr.o
 cmoc.exe -O2 --thomto -I ../../cmoc-0.1.71/src -I ../../cmoc-0.1.71/src/stdlib/ -L ../../cmoc-0.1.71/src/stdlib/ hypoc.c -lcmoc-crt-thm extramgr.o extramfl.o
+```
+
+le script de création du fichier sap à partir des binaires produits:
+```shell
+sapfs.exe -c extramfl.sap
+sapfs.exe -a extramfl.sap fl.bin
+sapfs.exe -a extramfl.sap gr.bin
+sapfs.exe -a extramfl.sap hypoc.bin
 ```
