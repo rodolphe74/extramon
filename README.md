@@ -23,7 +23,7 @@ char cmp(struct float_struct *fac, struct float_struct *arg); /* comparaison de 
 
 Ces fonctions s'utilisent par exemple ainsi :
 
-```
+```c
 #include <cmoc.h>
 #include "extramfl.h"
 
