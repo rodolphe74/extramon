@@ -48,7 +48,7 @@ int main(void)
 Le principe est de calculer les coordonnées X et Y d'une figure géometrique grâce à des formules savantes.
 
 # compilation
-Il est nécessaire d'avoir
+Sont nécessaires :
 * le compilateur cmoc (sur windows, il se compile facilement avec [msys2](https://www.msys2.org/))
 * sapfs.exe (un utilitaire permettant de copier les binaires MO/TO dans un fichier SAP équivalent à une disquette thomson)
 
