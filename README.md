@@ -45,7 +45,7 @@ int main(void)
 
 # exemple
 [hypoc.c](hypoc.c) est un exemple de graphisme utilisant des calculs flottants. Il s'agit d'un [hypocycloïde](https://fr.wikipedia.org/wiki/Hypocyclo%C3%AFde).
-Le principe est de calculer les coordonnées X et Y d'une figure géometrique à l'aide de formules savantes.
+Le principe est de calculer les coordonnées X et Y d'une figure géometrique à l'aide de formules savantes. Les fonctions de tracé de point et de ligne de l'extramoniteur ont été repris également ([extramgr.h](extramgr.h)).
 
 ![](float.gif)
 
