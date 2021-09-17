@@ -9,7 +9,7 @@ Pour la liste exhaustives des routines, lire ce [livre](https://github.com/rodol
 
 Dans le présent projet, les routines mathématiques sur les flottants (cf page 263) ont été reprise en C dans les fichiers extramfl.h et extramfl.c.
 
-```
+```c
 void print_float(struct float_struct *fs); /* affiche les 5 octets représentant le flottant */
 void init_extra(); /* initialisation de l'extramoniteur */
 void fin(char *float_value, struct float_struct *fs); /* conversion chaine de car vers struct flottant */
