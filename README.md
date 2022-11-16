@@ -7,7 +7,7 @@ Ce compilateur ne gère qu'une partie de la libc et il n'est par exemple pas enc
 Il est tout de même possible d'utiliser les routines assembleurs du "moniteur" et de l'"extramoniteur" Thomson pour pallier à ces manques.
 Pour la liste exhaustives des routines, lire ce [livre](https://github.com/rodolphe74/extramon/blob/main/to8.pdf)
 
-Dans le présent projet, les routines mathématiques sur les flottants (cf page 263) ont été reprise en C dans les fichiers extramfl.h et extramfl.c.
+Dans le présent projet, les routines mathématiques sur les flottants (cf page 263) ont été reprises en C dans les fichiers extramfl.h et extramfl.c.
 
 ```c
 void print_float(struct float_struct *fs); /* affiche les 5 octets représentant le flottant */
